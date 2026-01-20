@@ -1,0 +1,318 @@
+
+
+/* ===== Global ===== */
+body {
+    font-family: 'Tajawal', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 90px;
+    /* بسبب navbar fixed */
+}
+
+
+/* ===== Navbar ===== */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff7f50 !important;
+}
+
+.nav-link i {
+    margin-left: 8px;
+    /* مسافة بين الأيقونة والنص */
+    font-size: 1rem;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 140px 20px 100px;
+    text-align: center;
+    height: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+.hero .btn {
+    border-radius: 50px;
+    padding: 12px 28px;
+    background-color: #ff7f50;
+    border: none;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ff4500;
+    transform: translateY(-2px);
+}
+
+
+.hero .btn i {
+    margin-left: 8px;
+    /* مسافة بين الأيقونة والنص */
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+/* ===== Sections ===== */
+.section-table {
+    margin-top: 100px;
+}
+
+.section-table h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #1e3c72;
+}
+
+/* ===== Tables ===== */
+.table {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead th {
+    text-align: center;
+}
+
+.table tbody td {
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ===== Details Cell ===== */
+.details-cell .short {
+    display: inline-block;
+}
+
+.details-cell .full {
+    display: none;
+    margin-top: 6px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.show-more {
+    font-size: 0.85rem;
+    padding: 0;
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+.show-more:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* ===== Filter Input ===== */
+.filter-input {
+    border-radius: 10px;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+}
+
+/* ===== Contact Section ===== */
+#contact {
+    background: #f1f1f1;
+    padding: 70px 25px;
+    border-radius: 18px;
+}
+
+#contact h2 {
+    color: #1e3c72;
+    font-weight: 700;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+#contactForm button {
+    border-radius: 50px;
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* ===== Form Message ===== */
+#formMessage {
+    font-weight: 600;
+    color: #28a745;
+    margin-top: 15px;
+}
+
+/* ================== RESPONSIVE PRO ================== */
+
+/* ---------- Large screens (≥1200px) ---------- */
+@media (min-width: 1200px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.6rem;
+    }
+
+    .section-table {
+        max-width: 1100px;
+    }
+}
+
+/* ---------- Tablets (≤992px) ---------- */
+@media (max-width: 992px) {
+    .navbar-brand img {
+        height: 60px;
+        width: auto;
+    }
+
+    .hero {
+        padding: 120px 20px 80px;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .hero .btn {
+        padding: 10px 22px;
+        font-size: 0.95rem;
+    }
+
+    .table thead {
+        font-size: 0.9rem;
+    }
+}
+
+/* ---------- Mobile (≤768px) ---------- */
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 75px;
+    }
+
+    /* Navbar */
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        font-size: 1.05rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 110px 15px 70px;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+
+    .hero .d-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: auto;
+    }
+
+    /* Tables */
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 12px;
+    }
+
+    .table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 0;
+        border: none;
+    }
+
+    .table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #1e3c72;
+    }
+}
+
+/* ---------- Small Mobile (≤480px) ---------- */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    #contact {
+        padding: 50px 15px;
+    }
+
+    #contactForm button {
+        width: 100%;
+    }
+}

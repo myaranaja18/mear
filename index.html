@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>خريطة الخدمات الأساسية</title>
+
+    <!-- تضمين بوستراب اف لاين -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER & NAV ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="" height="80" width="100">
+                خدماتي
+            </a>
+
+            <ul class="navbar-nav ms-auto" style="margin:auto">
+                <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hospitals">
+                    <i class="fa-solid fa-hospital"></i>المستشفيات</a></li>
+                <li class="nav-item"><a class="nav-link" href="#schools"><i class="fa-solid fa-school"></i>المدارس</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#gov"><i class="fa-solid fa-building"></i>الخدمات
+                        الحكومية</a></li>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+    <section id="home" class="hero d-flex align-items-center text-center py-5">
+        <div class="container">
+            <h1 class="fw-bold mb-3">خريطة الخدمات الأساسية</h1>
+            <p class="lead mb-4">دليلك السريع للوصول إلى الخدمات الحيوية</p>
+
+            <div class="row justify-content-center g-3">
+                <div class="col-12 col-md-4">
+                    <button class="btn btn-primary w-100" data-target="#hospitals">
+                        <i class="fa-solid fa-hospital ms-2"></i>المستشفيات
+                    </button>
+                </div>
+                <div class="col-12 col-md-4">
+                    <button class="btn btn-primary w-100" data-target="#schools">
+                        <i class="fa-solid fa-school ms-2"></i>المدارس
+                    </button>
+                </div>
+                <div class="col-12 col-md-4">
+                    <button class="btn btn-primary w-100" data-target="#gov">
+                        <i class="fa-solid fa-building ms-2"></i>الخدمات الحكومية
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= HOSPITALS ================= -->
+    <!-- تاحظار البانات من الarray من js -->
+    <section id="hospitals" class="container section-table">
+        <h2>المستشفيات</h2>
+        <input type="text" class="form-control mb-3 filter-input" placeholder="ابحث بالاسم أو الموقع">
+
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>الاسم</th>
+                    <th>الموقع</th>
+                    <th>رقم التواصل</th>
+                    <th>تفاصيل</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- سيتم توليد الصفوف هنا تلقائيًا بواسطة JS -->
+            </tbody>
+        </table>
+    </section>
+    <!-- <section id="hospitals" class="container section-table">
+        <h2>المستشفيات</h2>
+        <input type="text" class="form-control mb-3 filter-input" placeholder="ابحث بالاسم أو الموقع">
+
+        <table class="table table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>الاسم</th>
+                    <th>الموقع</th>
+                    <th>رقم التواصل</th>
+                    <th>تفاصيل</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td data-label="الاسم">مستشفى الشفاء</td>
+                    <td data-label="الموقع">مدينة غزة</td>
+                    <td data-label="رقم التواصل">082828000</td>
+                    <td data-label="تفاصيل" class="details-cell">
+                        <span class="short">طوارئ وجراحة</span>
+                        <span class="full">أكبر مستشفى في قطاع غزة، خدمات طوارئ وجراحة متقدمة.</span>
+                        <button class="btn btn-link show-more">عرض المزيد</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="الاسم">مستشفى القدس</td>
+                    <td data-label="الموقع">تل الهوى</td>
+                    <td data-label="رقم التواصل">082828000</td>
+
+                    <td data-label="تفاصيل" class="details-cell">
+                        <span class="short">خدمات تخصصية</span>
+                        <span class="full">يقدم خدمات تخصصية وطبية متنوعة.</span>
+                        <button class="btn btn-link show-more">عرض المزيد</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="الاسم">مستشفى الأهلي العربي</td>
+                    <td data-label="الموقع">مدينة غزة</td>
+                    <td data-label="رقم التواصل">082828000</td>
+
+                    <td data-label="تفاصيل" class="details-cell">
+                        <span class="short">باطنة وأطفال</span>
+                        <span class="full">خدمات طبية عامة وباطنية وقسم أطفال.</span>
+                        <button class="btn btn-link show-more">عرض المزيد</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="الاسم">مستشفى كمال عدوان</td>
+                    <td data-label="الموقع">بيت لاهيا</td>
+                    <td data-label="رقم التواصل">082828000</td>
+
+                    <td data-label="تفاصيل" class="details-cell">
+                        <span class="short">خدمات حكومية</span>
+                        <span class="full">مستشفى حكومي يخدم شمال القطاع.</span>
+                        <button class="btn btn-link show-more">عرض المزيد</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="الاسم">مستشفى ناصر</td>
+                    <td data-label="الموقع">خان يونس</td>
+                    <td data-label="رقم التواصل">082828000</td>
+
+                    <td data-label="تفاصيل" class="details-cell">
+                        <span class="short">رعاية شاملة</span>
+                        <span class="full">مستشفى رئيسي يقدم خدمات طبية شاملة.</span>
+                        <button class="btn btn-link show-more">عرض المزيد</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section> -->
+
+
+
+
+    <!-- ================= SCHOOLS ================= -->
+    <section id="schools" class="container section-table">
+        <h2>المدارس</h2>
+        <input type="text" class="form-control mb-3 filter-input" placeholder="ابحث بالاسم أو الموقع">
+
+        <table class="table table-hover">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>الاسم</th>
+                        <th>الموقع</th>
+                        <th>رقم التواصل</th>
+                        <th>تفاصيل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- سيتم توليد الصفوف هنا تلقائيًا بواسطة JS -->
+                </tbody>
+            </table>
+    </section>
+    <!-- <section id="schools" class="container section-table">
+        <h2>المدارس</h2>
+        <input type="text" class="form-control mb-3 filter-input" placeholder="ابحث بالاسم أو الموقع">
+
+        <table class="table table-hover">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>الاسم</th>
+                        <th>الموقع</th>
+                        <th>رقم التواصل</th>
+                        <th>تفاصيل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="الاسم">مدرسة فلسطين الثانوية</td>
+                        <td data-label="الموقع">مدينة غزة</td>
+                        <td data-label="رقم التواصل">082828000</td>
+
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">تعليم ثانوي</span>
+                            <span class="full">مدرسة حكومية تقدم التعليم الثانوي.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="الاسم">مدرسة الكرامة الأساسية</td>
+                        <td data-label="الموقع">جباليا</td>
+                        <td data-label="رقم التواصل">082828000</td>
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">تعليم أساسي</span>
+                            <span class="full">تعليم أساسي للبنين والبنات.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="الاسم">مدرسة الشجاعية</td>
+                        <td data-label="الموقع">الشجاعية</td>
+                        <td data-label="رقم التواصل">082828000</td>
+
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">مراحل متعددة</span>
+                            <span class="full">تعليم أساسي وثانوي.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="الاسم">مدرسة الفلاح</td>
+                        <td data-label="الموقع">رفح</td>
+                        <td data-label="رقم التواصل">082828000</td>
+
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">تعليم حديث</span>
+                            <span class="full">مناهج حديثة وأنشطة طلابية.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="الاسم">مدرسة النور</td>
+                        <td data-label="الموقع">خان يونس</td>
+                        <td data-label="رقم التواصل">082828000</td>
+
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">تعليم أساسي</span>
+                            <span class="full">بيئة تعليمية آمنة وداعمة.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+    </section> -->
+
+
+
+
+    <!-- ================= GOVERNMENT ================= -->
+    <section id="gov" class="container section-table">
+        <h2>الخدمات الحكومية</h2>
+<!-- تاغ الجدول جديد للخدمات -->
+        <table class="table table-hover">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>الاسم</th>
+                        <th>الموقع</th>
+                        <th>رقم التواصل</th>
+                        <th>تفاصيل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- البيانات من js -->
+                </tbody>
+            </table>
+    </section>
+    <!-- <section id="gov" class="container section-table">
+        <h2>الخدمات الحكومية</h2>
+
+        <table class="table table-hover">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>الاسم</th>
+                        <th>الموقع</th>
+                        <th>رقم التواصل</th>
+                        <th>تفاصيل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="الاسم">بلدية غزة</td>
+                        <td data-label="الموقع">مدينة غزة</td>
+                        <td data-label="رقم التواصل">082828000</td>
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">خدمات بلدية</span>
+                            <span class="full">مياه، كهرباء، تنظيم، شكاوى.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="الاسم">وزارة الداخلية</td>
+                        <td data-label="الموقع">غزة</td>
+                        <td data-label="رقم التواصل">082828000</td>
+
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">خدمات مدنية</span>
+                            <span class="full">هويات، معاملات مدنية.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="الاسم">مكتب الجوازات</td>
+                        <td data-label="الموقع">غزة</td>
+                        <td data-label="رقم التواصل">082828000</td>
+
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">جوازات سفر</span>
+                            <span class="full">إصدار وتجديد الجوازات.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="الاسم">وزارة الصحة</td>
+                        <td data-label="الموقع">غزة</td>
+                        <td data-label="رقم التواصل">082828000</td>
+
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">إدارة صحية</span>
+                            <span class="full">تنظيم القطاع الصحي.</span>
+                            <button class="btn btn-link show-more">عرض المزيد</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="الاسم">وزارة التعليم</td>
+                        <td data-label="الموقع">غزة</td>
+                        <td data-label="رقم التواصل">082828000</td>
+
+                        <td data-label="تفاصيل" class="details-cell">
+                            <span class="short">خدمات تعليمية</span>
+                            <span class="full">إدارة المدارس والتعليم.</span>
+                </tbody>
+            </table>
+    </section> -->
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="container mb-5">
+        <h2 class="text-center mb-4">تواصل معنا</h2>
+
+        <!-- فيديو توضيحي -->
+        <div class="text-center mb-4">
+            <video width="100%" height="auto" controls>
+                <source src="assets/video/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <form id="contactForm">
+            <input type="text" class="form-control mb-3" placeholder="الاسم" required>
+            <input type="email" class="form-control mb-3" placeholder="البريد الإلكتروني" required>
+            <textarea class="form-control mb-3" rows="5" placeholder="نص الرسالة" required></textarea>
+            <button class="btn btn-success w-100">إرسال</button>
+        </form>
+
+        <div id="formMessage" class="text-center mt-3"></div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
